@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Gifts – Online Gifting Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Unique Gifts</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="cart.html" class="cart-link">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/images/hero-banner.jpg" alt="Hero Banner" class="hero-image">
+            <div class="hero-text">
+                <h2>Create Memorable Gifts</h2>
+                <p>Customize photo frames, gifts, and surprise videos for your loved ones</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Choose Your Gift Category</h2>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="frames">Photo Frames</button>
+                <button class="tab-btn" data-category="gifts">Gifts</button>
+                <button class="tab-btn" data-category="videos">Surprise Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Modal -->
+    <div class="modal" id="customizeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Customize Your Gift</h3>
+            <div class="customization-form">
+                <div class="upload-section">
+                    <label for="imageUpload">Upload Your Photo</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <div class="image-preview" id="imagePreview">
+                        <img src="" alt="Preview" id="previewImg" style="display: none;">
+                        <p id="uploadText">No image uploaded</p>
+                    </div>
+                </div>
+                
+                <div class="size-section">
+                    <label>Select Frame Size</label>
+                    <select id="frameSize">
+                        <option value="A4">A4 (₹50 extra)</option>
+                        <option value="A3">A3 (₹100 extra)</option>
+                        <option value="Square" selected>Square (Standard)</option>
+                    </select>
+                </div>
+                
+                <div class="message-section">
+                    <label>Add Personal Message</label>
+                    <textarea id="personalMessage" placeholder="Enter your message here..."></textarea>
+                </div>
+                
+                <div class="price-display">
+                    <p>Base Price: ₹<span id="basePrice">0</span></p>
+                    <p>Size Extra: ₹<span id="sizeExtra">0</span></p>
+                    <p class="total-price">Total: ₹<span id="totalPrice">0</span></p>
+                </div>
+                
+                <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Unique Gifts. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
